@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Добро пожаловать</title>
+</head>
+<body>
+    <h1>Здесь вы можете создать видео с бегущей строкой.</h1>
+    <form action="{% url 'create_video' %}" method="post">
+        {% csrf_token %}
+        <input type="text" name="text_video" placeholder="Введите текст здесь" required>
+        <button type="submit">Отправить</button>
+    </form>
+</body>
+</html>
